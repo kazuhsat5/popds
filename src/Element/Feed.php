@@ -38,8 +38,20 @@ class Feed extends Element
     public function output()
     {
         $result = '';
+
         $result .= sprintf('<feed xmlns="%s" xml:lang="%s">', $this->_xmlns, $this->_lang);
+
+        // 子要素が存在する場合
+        if (!empty($this->_elements)) {
+            // 子要素の出力
+            foreach ($this->_elements as $element) {
+                $element->output();
+            }
+        }
+
         $result .= '</feed>'
+
+        return $result;
     }
 
     public function setXmlns($xmlns)
