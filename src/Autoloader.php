@@ -38,9 +38,7 @@ class Autoloader
     }
 
     /**
-     * autoload関数(PSR-0準拠)
-     *
-     * @see http://www.php-fig.org/psr/psr-0/
+     * autoload関数
      *
      * @param string $className クラス名
      * @return void
