@@ -3,7 +3,7 @@
 namespace Popds\Element;
 
 /**
- * XMLクラス
+ * xmlクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
