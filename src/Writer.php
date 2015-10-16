@@ -11,10 +11,13 @@ class Writer
 {
     /**
      * コンストラクタ
-     *
-     * @return void
      */
     public function __construct()
     {
+    }
+
+    public function exec()
+    {
+        var_dump('test');
     }
 }
