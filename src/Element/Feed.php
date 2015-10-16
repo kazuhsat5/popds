@@ -45,7 +45,7 @@ class Feed extends Element
         if (!empty($this->_elements)) {
             // 子要素の出力
             foreach ($this->_elements as $element) {
-                $element->output();
+                $result .= $element->output();
             }
         }
 
