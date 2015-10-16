@@ -24,7 +24,7 @@ class Xml extends Element
     private $_encoding = 'utf-8';
 
     /**
-     * 出力する
+     * 出力
      *
      * @return string
      */

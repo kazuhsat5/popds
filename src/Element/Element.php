@@ -9,5 +9,10 @@ namespace Popds\Element;
  */
 abstract class Element
 {
-    //
+    /**
+     * 出力
+     *
+     * @return string
+     */
+    abstract public function output();
 }
