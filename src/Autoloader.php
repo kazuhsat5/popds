@@ -10,6 +10,23 @@ namespace Popds;
 class Autoloader
 {
     /**
+     * ディレクトリー
+     *
+     * @var
+     */
+    private $_directory;
+
+    /**
+     * コンストラクタ
+     *
+     * @return void
+     */
+    public function __construct($directory = __DIR__)
+    {
+        $this->_directory = $directory;
+    }
+
+    /**
      * __autorload()の実装を行う
      *
      * @param bool $prepend キューを先頭に追加(デフォルトでfalse)
@@ -31,15 +48,13 @@ class Autoloader
     public function autoload($className)
     {
         $className = ltrim($className, '\\');
-        $fileName  = '';
-        $namespace = '';
-        if ($lastNsPos = strrpos($className, '\\')) {
-            $namespace = substr($className, 0, $lastNsPos);
-            $className = substr($className, $lastNsPos + 1);
-            $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
-        }
-        $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
 
-        require $fileName;
+        if ($lastNsPos = strrpos($className, '\\')) {
+            $className = substr($className, $lastNsPos + 1);
+        }
+
+        $fileName = str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+
+        require $this->_directory . '/' . $fileName;
     }
 }
