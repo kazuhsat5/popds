@@ -33,9 +33,4 @@ class Id extends Element
     {
         return sprintf('<id>%s</id>', $this->_id);
     }
-
-    public function setId($id)
-    {
-        $this->_id = $id;
-    }
 }
