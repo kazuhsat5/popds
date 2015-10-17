@@ -16,7 +16,14 @@ class Writer
      *
      * @var
      */
-    private $_feed;
+    private $_feed = [];
+
+    /**
+     * エントリー
+     *
+     * @var
+     */
+    private $_entry;
 
     /**
      * コンストラクタ
@@ -38,6 +45,10 @@ class Writer
         // XML宣言
         $xml = new Element\Xml();
         $result .= $xml->output();
+
+        if (!empty($this->_entry)) {
+            $this->_feed->addElement($this->_entry);
+        }
 
         $result .= $this->_feed->output();
 
@@ -115,5 +126,34 @@ class Writer
         $this->_feed->addElement($author);
 
         return $this;
+    }
+
+    /**
+     * フィードのリンクをセット
+     *
+     * @param string $rel rel
+     * @param string $href href 
+     * @param string $type type
+     * @return void
+     */
+    public function setFeedLink($rel, $href, $type)
+    {
+       $this->_feed->addElement(new Element\Link($rel, $href, $type));
+
+       return $this;
+    }
+
+    /**
+     * エントリーをセット
+     *
+     * @return void
+     */
+    public function addEntry()
+    {
+        if (!empty($this->_entry)) {
+            $this->_feed->addElement($this->_entry);
+        }
+
+        $this->_entry = new Element\Entry();
     }
 }
