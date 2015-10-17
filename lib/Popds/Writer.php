@@ -96,12 +96,20 @@ class Writer
      * @param string $uri  URI
      * @return void
      */
-    public function setFeedAuthor($name, $uri)
+    public function setFeedAuthor($name = null, $uri = null)
     {
         $author = new Element\Author();
 
+        // 著者名が指定されていた場合
         if (!empty($name)) {
+            // 子要素追加
             $author->addElement(new Element\Name($name));
+        }
+
+        // URIが指定されていた場合
+        if (!empty($uri)) {
+            // 子要素追加
+            $author->addElement(new Element\Uri($uri));
         }
 
         $this->_feed->addElement($author);
