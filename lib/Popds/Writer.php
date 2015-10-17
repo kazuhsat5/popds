@@ -88,4 +88,24 @@ class Writer
 
         return $this;
     }
+
+    /**
+     * フィードの作者をセット
+     *
+     * @param string $name 著者名
+     * @param string $uri  URI
+     * @return void
+     */
+    public function setFeedAuthor($name, $uri)
+    {
+        $author = new Element\Author();
+
+        if (!empty($name)) {
+            $author->addElement(new Element\Name($name));
+        }
+
+        $this->_feed->addElement($author);
+
+        return $this;
+    }
 }

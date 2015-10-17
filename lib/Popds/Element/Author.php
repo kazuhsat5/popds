@@ -42,7 +42,7 @@ class Author extends Element
      * @param Popds\Element 子要素
      * @return void
      */
-    public function addElements(Popds\Element $element)
+    public function addElement(Element $element)
     {
         $this->_elements[] = $element;
     }
