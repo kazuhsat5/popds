@@ -49,7 +49,7 @@ class Feed extends Element
             }
         }
 
-        $result .= '</feed>'
+        $result .= '</feed>';
 
         return $result;
     }

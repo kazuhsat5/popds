@@ -2,8 +2,9 @@
 
 require_once 'bootstrap.php';
 
-$obj = new Popds\Writer();
+$writer = new Popds\Writer();
 
-
-
-echo $obj->output();
+echo $writer->setFeedTitle("test")
+            ->setFeedId('http://www.kazuhsat.com/ebook/catalog.opds')
+            ->setFeedUpdated(date('Y-m-d\TH:i:s'))
+            ->output();
