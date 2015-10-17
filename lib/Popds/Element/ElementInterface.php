@@ -3,16 +3,16 @@
 namespace Popds\Element;
 
 /**
- * 要素基底クラス
+ * 要素インターフェース
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-abstract class Element implements ElementInterface
+interface ElementInterface
 {
     /**
      * 出力
      *
      * @return string
      */
-    abstract public function output();
+    public function output();
 }
