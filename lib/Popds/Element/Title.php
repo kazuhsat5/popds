@@ -33,9 +33,4 @@ class Title extends Element
     {
         return sprintf('<title>%s</title>', $this->_title);
     }
-
-    public function setTitle($title)
-    {
-        $this->_title = $title;
-    }
 }
