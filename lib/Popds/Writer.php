@@ -12,15 +12,38 @@ use Popds\Element;
 class Writer
 {
     /**
+     * 要素
+     *
+     * @var
+     */
+    private $_elements = [];
+
+    /**
      * コンストラクタ
      */
     public function __construct()
     {
+        $this->_elements[] = new Element\Xml();
     }
 
-    public function exec()
+    /**
+     * OPDSの出力
+     *
+     * @return string
+     */
+    public function output()
     {
-        $xml = new Element\Xml();
-        echo $xml->output();
+        $result = '';
+
+        foreach ($this->_elements as $element) {
+            $result .= $element->output();
+        }
+
+        return $result;
+    }
+
+    public function addElement(Popds\Element $element)
+    {
+        $this->_elements[] = $element;
     }
 }

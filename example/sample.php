@@ -1,7 +1,9 @@
 <?php
 
-$autoloader = new Autoloader(__DIR__ . '/lib/');
-$autoloader->register();
+require_once 'bootstrap.php';
 
 $obj = new Popds\Writer();
-//$obj->exec();
+
+
+
+echo $obj->output();
