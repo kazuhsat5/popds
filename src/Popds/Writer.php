@@ -2,6 +2,8 @@
 
 namespace Popds;
 
+use Popds\Element;
+
 /**
  * ライタークラス
  *
@@ -18,6 +20,7 @@ class Writer
 
     public function exec()
     {
-        var_dump('test');
+        $xml = new Element\Xml();
+        echo $xml->output();
     }
 }
