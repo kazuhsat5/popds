@@ -33,8 +33,6 @@ class Entry extends Element
 
         $result .= '</entry>';
 
-        var_dump($result);
-
         return $result;
     }
 

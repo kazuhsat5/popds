@@ -105,7 +105,7 @@ class Writer
      *
      * @param string $name 著者名
      * @param string $uri  URI
-     * @return void
+     * @return Popds\Writer
      */
     public function setFeedAuthor($name = null, $uri = null)
     {
@@ -134,7 +134,7 @@ class Writer
      * @param string $rel rel
      * @param string $href href 
      * @param string $type type
-     * @return void
+     * @return Popds\Writer
      */
     public function setFeedLink($rel, $href, $type)
     {
@@ -144,9 +144,9 @@ class Writer
     }
 
     /**
-     * エントリーをセット
+     * エントリー要素を追加
      *
-     * @return void
+     * @return Popds\Writer
      */
     public function addEntry()
     {
@@ -155,5 +155,20 @@ class Writer
         }
 
         $this->_entry = new Element\Entry();
+
+        return $this;
+    }
+
+    /**
+     * エントリーのタイトルをセット
+     *
+     * @param string $entryTitle エントリータイトル
+     * @return Popds\Writer
+     */
+    public function setEntryTitle($entryTitle)
+    {
+        $this->_entry->addElement(new Element\Title($entryTitle));
+
+        return $this;
     }
 }
