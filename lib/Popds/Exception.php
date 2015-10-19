@@ -7,7 +7,7 @@ namespace Popds;
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-abstract class OpdsException extends \Exception
+abstract class Exception extends \Exception
 {
     //
 }
