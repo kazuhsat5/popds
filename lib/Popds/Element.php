@@ -1,13 +1,13 @@
 <?php
 
-namespace Popds\Element;
+namespace Popds;
 
 /**
  * 要素基底クラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-abstract class Element implements ElementInterface
+abstract class Element
 {
     /**
      * 出力
