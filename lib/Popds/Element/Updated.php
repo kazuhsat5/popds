@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * updatedクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class Updated extends Element
+class Updated extends Popds\Element
 {
     /**
      * アップデート日時

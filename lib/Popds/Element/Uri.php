@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * URIクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class URI extends Element
+class URI extends Popds\Element
 {
     /**
      * URI

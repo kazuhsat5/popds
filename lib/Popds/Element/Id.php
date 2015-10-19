@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * idクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class Id extends Element
+class Id extends Popds\Element
 {
     /**
      * ID

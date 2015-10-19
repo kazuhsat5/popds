@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * feedクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class Feed extends Element
+class Feed extends Popds\Element
 {
     /**
      * xmlns属性値

@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * linkクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class Link extends Element
+class Link extends Popds\Element
 {
     /**
      * rel

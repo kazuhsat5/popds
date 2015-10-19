@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * Entryクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class Entry extends Element
+class Entry extends Popds\Element
 {
     /**
      * 子要素

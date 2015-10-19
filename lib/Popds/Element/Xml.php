@@ -2,12 +2,14 @@
 
 namespace Popds\Element;
 
+use Popds;
+
 /**
  * xmlクラス
  *
  * @author kazuhsat <kazuhsat555@gmail.com>
  */
-class Xml extends Element
+class Xml extends Popds\Element
 {
     /**
      * バージョン
